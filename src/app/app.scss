@@ -14,3 +14,11 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.tabs-wp-primary .tab-button:hover:not(.disable-hover),
+.tabs-wp-primary .tab-button:hover:not(.disable-hover) .tab-button-icon,
+.tabs-wp-primary .tab-button[aria-selected=true],
+.tabs-wp-primary .tab-button[aria-selected=true] .tab-button-icon {
+  border-color: #FF0068;
+  color: #fff;
+}

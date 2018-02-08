@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
+import { SleepPage } from '../pages/sleep/sleep';
+import { DiaperPage } from '../pages/diaper/diaper';
+import { EatPage } from '../pages/eat/eat';
 import { TabsPage } from '../pages/tabs/tabs';
+
+import { DateComponent } from '../components/date/date';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,21 +16,29 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
+    SleepPage,
+    DiaperPage,
+    EatPage,
+    TabsPage,
+    DateComponent
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      tabsPlacement: "top",
+      platforms: {
+        ios: {
+          tabsPlacement: "bottom"
+        }
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
+    SleepPage,
+    DiaperPage,
+    EatPage,
     TabsPage
   ],
   providers: [

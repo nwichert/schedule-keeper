@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <date></date>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="eat-type">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          bottle icon
+        </ion-col>
+        <ion-col>
+          breast icon
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="ounces-eaten">
+    <ion-label>Ounces Eaten: {{ ouncesEaten }}</ion-label>
+    <ion-range 
+      min="0" 
+      max="16" 
+      step="1" 
+      snaps="true" 
+      color="secondary" 
+      [(ngModel)]="ouncesEaten"></ion-range>
+  </div>
+
+  <div class="nipple-size">
+    <ion-label>Nipple Size:</ion-label>
+    <button ion-button>1</button>
+    <button ion-button>2</button>
+    <button ion-button>3</button>
+    <button ion-button>4</button>
+    <button ion-button>5</button>
+    <button ion-button>6</button>
+  </div>
+
+  <div class="eat-submit">
+    <button ion-button large>Submit</button>
+  </div>
+
+</ion-content>
