@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import {CustomIconsModule} from 'ionic2-custom-icons';
 
 import { SleepPage } from '../pages/sleep/sleep';
 import { DiaperPage } from '../pages/diaper/diaper';
@@ -24,6 +25,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    CustomIconsModule,
     IonicModule.forRoot(MyApp, {
       tabsPlacement: "top",
       platforms: {

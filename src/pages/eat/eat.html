@@ -8,12 +8,16 @@
 
   <div class="eat-type">
     <ion-grid>
-      <ion-row>
+      <ion-row text-center>
         <ion-col>
-          bottle icon
+          <button>
+              <ion-icon name="water" style="zoom:4.0;"></ion-icon>
+          </button>
         </ion-col>
         <ion-col>
-          breast icon
+          <button>
+            <ion-icon name="female" style="zoom:4.0;"></ion-icon>
+          </button>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -32,16 +36,29 @@
 
   <div class="nipple-size">
     <ion-label>Nipple Size:</ion-label>
-    <button ion-button>1</button>
-    <button ion-button>2</button>
-    <button ion-button>3</button>
-    <button ion-button>4</button>
-    <button ion-button>5</button>
-    <button ion-button>6</button>
+    <div class="nipple-size-buttons">
+      <button ion-button>1</button>
+      <button ion-button>2</button>
+      <button ion-button>3</button>
+      <button ion-button>4</button>
+      <button ion-button>5</button>
+      <button ion-button>6</button>
+    </div>
   </div>
 
   <div class="eat-submit">
     <button ion-button large>Submit</button>
+  </div>
+
+  <div class="eat-log">
+    <ion-card>
+      <ion-card-header>
+        Date
+      </ion-card-header>
+      <ion-card-content>
+        Ounces Eaten:
+      </ion-card-content>
+    </ion-card>
   </div>
 
 </ion-content>
