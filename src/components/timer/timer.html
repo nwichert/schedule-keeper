@@ -1,5 +1,5 @@
-<ion-item>
-  <ion-datetime displayFormat="HH:mm:ss"  [(ngModel)]="myDate" pickerFormat="HH mm ss"></ion-datetime>
-</ion-item>
-
-<button ion-button (click)="startStopwatch()">Start</button>
+<div>
+  <h1>
+    {{hoursDisplay ? hoursDisplay : '00'}} : {{(minutesDisplay) && (minutesDisplay <= 59) ? minutesDisplay : '00'}} : {{(secondsDisplay) && (secondsDisplay <= 59) ? secondsDisplay : '00'}} <br/>
+  </h1>
+</div>

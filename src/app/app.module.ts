@@ -11,9 +11,12 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { DateComponent } from '../components/date/date';
 import { TimerComponent } from '../components/timer/timer';
+import { TimerButtonsComponent } from '../components/timer-buttons/timer-buttons';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { TimerProvider } from '../providers/timer/timer';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     EatPage,
     TabsPage,
     DateComponent,
-    TimerComponent
+    TimerComponent,
+    TimerButtonsComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    TimerProvider
   ]
 })
 export class AppModule {}
