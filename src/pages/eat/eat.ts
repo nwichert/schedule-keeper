@@ -7,11 +7,54 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class EatPage {
 
+  public breastRightOrLeft;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SleepPage');
+  selectBottle(){
+
+  }
+
+  public selectBreast = (breastSide) => {
+    if (this.breastRightOrLeft === breastSide) return;
+    this.breastRightOrLeft = breastSide;
+  }
+
+  selectLeftBreast(){
+
+  }
+
+  selectRightBreast(){
+
+  }
+
+  nippleSizeOne(){
+
+  }
+
+  nippleSizeTwo(){
+
+  }
+
+  nippleSizeThree(){
+
+  }
+
+  nippleSizeFour(){
+
+  }
+
+  nippleSizeFive(){
+
+  }
+
+  nippleSizeSix(){
+
+  }
+
+  eatLogSubmit(){
+
   }
 
 }

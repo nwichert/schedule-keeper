@@ -10,14 +10,28 @@
     <ion-grid>
       <ion-row text-center>
         <ion-col>
-          <button>
+          <button (click)="selectBottle()">
               <ion-icon name="water" style="zoom:4.0;"></ion-icon>
           </button>
         </ion-col>
         <ion-col>
-          <button>
+          <button> 
             <ion-icon name="female" style="zoom:4.0;"></ion-icon>
           </button>
+          <div class="breastSide">
+            <ion-row text-center>
+              <ion-col>
+                <button (click)="selectLeftBreast()">
+                    <ion-icon name="arrow-dropleft" style="zoom:2.0;">Left</ion-icon>
+                </button>
+              </ion-col>
+              <ion-col>
+                  <button (click)="selectRightBreast()">
+                      <ion-icon name="arrow-dropright" style="zoom:2.0;">Right</ion-icon>
+                  </button>
+                </ion-col>
+            </ion-row>
+          </div>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -37,28 +51,30 @@
   <div class="nipple-size">
     <ion-label>Nipple Size:</ion-label>
     <div class="nipple-size-buttons">
-      <button ion-button>1</button>
-      <button ion-button>2</button>
-      <button ion-button>3</button>
-      <button ion-button>4</button>
-      <button ion-button>5</button>
-      <button ion-button>6</button>
+      <button ion-button (click)="nippleSizeOne()">1</button>
+      <button ion-button (click)="nippleSizeTwo()">2</button>
+      <button ion-button (click)="nippleSizeThree()">3</button>
+      <button ion-button (click)="nippleSizeFour()">4</button>
+      <button ion-button (click)="nippleSizeFive()">5</button>
+      <button ion-button (click)="nippleSizeSix()">6</button>
     </div>
   </div>
 
   <div class="eat-submit">
-    <button ion-button large>Submit</button>
+    <button ion-button large (click)="eatLogSubmit()">Submit</button>
   </div>
 
-  <div class="eat-log">
-    <ion-card>
-      <ion-card-header>
-        Date
-      </ion-card-header>
-      <ion-card-content>
-        Ounces Eaten:
-      </ion-card-content>
-    </ion-card>
-  </div>
+  <ion-list>
+    <div class="eat-log">
+      <ion-card>
+        <ion-card-header>
+          Date
+        </ion-card-header>
+        <ion-card-content>
+          Ounces Eaten:
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ion-list>
 
 </ion-content>
