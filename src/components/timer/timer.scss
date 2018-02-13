@@ -1,5 +1,15 @@
+@font-face {
+    font-family: Orbitron;
+    src: url('../../assets/fonts/orbitron-timer.woff2');
+    color: #FF0068;
+}
+
 h1 {
-    color: #57acec;
+    font-family: Orbitron;
+    src: url('../../assets/fonts/orbitron-timer.woff2');
+    color: #FF0068;
     margin-top: 24px; 
-    text-align: center;  
+    text-align: center;
+    font-size: 40px;
+    padding-top: 15px;
 }
