@@ -11,13 +11,13 @@
       <ion-row text-center>
         <ion-col>
           <button (click)="selectBottle()">
-              <ion-icon name="water" style="zoom:4.0;"></ion-icon>
+              <ion-icon name="icon-bottle-fed-selected"></ion-icon>
           </button>
         </ion-col>
         <ion-col>
-          <button> 
-            <ion-icon name="female" style="zoom:4.0;"></ion-icon>
-          </button>
+          <!--<button> 
+            <ion-icon name="icon-breast-fed"></ion-icon>
+          </button>-->
           <div class="breastSide">
             <ion-row text-center>
               <ion-col>
@@ -67,17 +67,20 @@
     <button ion-button large (click)="eatLogSubmit()">Submit</button>
   </div>
 
-  <ion-list>
-    <div class="eat-log">
-      <ion-card>
-        <ion-card-header>
-          Date
-        </ion-card-header>
-        <ion-card-content>
-          Ounces Eaten:
-        </ion-card-content>
-      </ion-card>
-    </div>
-  </ion-list>
+  <div class="journal">
+    <h4>Food Log:</h4>
+    <ion-list>
+      <div class="eat-log">
+        <ion-card>
+          <ion-card-header>
+            Date
+          </ion-card-header>
+          <ion-card-content>
+            Ounces Eaten:
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-list>
+  </div>
 
 </ion-content>
