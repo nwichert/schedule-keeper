@@ -10,15 +10,15 @@
     <ion-grid>
       <ion-row text-center>
         <ion-col>
-          <button>
+          <button (click)="showBottleInfo=!showBottleInfo">
               <svg-icon src="../assets/icon/bottle-fed.svg"></svg-icon>
           </button>
         </ion-col>
         <ion-col>
-          <button>
+          <button (click)="show=!show">
             <svg-icon src="../assets/icon/breast-fed.svg"></svg-icon>
           </button>
-          <div class="breastSide">
+          <div *ngIf="show">
             <ion-row text-center>
               <ion-col>
                 <button>
@@ -37,36 +37,40 @@
     </ion-grid>
   </div>
 
-  <timer></timer>
-  <timer-buttons></timer-buttons>
-
-  <div class="ounces-eaten">
-    <div class="ouncesEaten">
-      <ion-label>Ounces Eaten: {{ ouncesEaten }}</ion-label>
-    </div>
-    <ion-range 
-      min="0" 
-      max="16" 
-      step="1" 
-      snaps="true" 
-      color="secondary" 
-      [(ngModel)]="ouncesEaten"></ion-range>
+  <div *ngIf="show">
+    <timer></timer>
+    <timer-buttons></timer-buttons>
   </div>
 
-  <div class="nipple-size">
-    <ion-label>Nipple Size:</ion-label>
-    <div class="nipple-size-buttons">
-      <button ion-button (click)="nippleSizeOne()">1</button>
-      <button ion-button (click)="nippleSizeTwo()">2</button>
-      <button ion-button (click)="nippleSizeThree()">3</button>
-      <button ion-button (click)="nippleSizeFour()">4</button>
-      <button ion-button (click)="nippleSizeFive()">5</button>
-      <button ion-button (click)="nippleSizeSix()">6</button>
+  <div *ngIf="showBottleInfo">
+    <div class="ounces-eaten">
+      <div class="ouncesEaten">
+        <ion-label>Ounces Eaten: {{ ouncesEaten }}</ion-label>
+      </div>
+      <ion-range 
+        min="0" 
+        max="16" 
+        step="1" 
+        snaps="true" 
+        color="secondary" 
+        [(ngModel)]="ouncesEaten"></ion-range>
     </div>
-  </div>
 
-  <div class="eat-submit">
-    <button ion-button large (click)="eatLogSubmit()">Submit</button>
+    <div class="nipple-size">
+      <ion-label>Nipple Size:</ion-label>
+      <div class="nipple-size-buttons">
+        <button ion-button (click)="nippleSizeOne()">1</button>
+        <button ion-button (click)="nippleSizeTwo()">2</button>
+        <button ion-button (click)="nippleSizeThree()">3</button>
+        <button ion-button (click)="nippleSizeFour()">4</button>
+        <button ion-button (click)="nippleSizeFive()">5</button>
+        <button ion-button (click)="nippleSizeSix()">6</button>
+      </div>
+    </div>
+
+    <div class="eat-submit">
+      <button ion-button large (click)="eatLogSubmit()">Submit</button>
+    </div>
   </div>
 
   <div class="journal">
