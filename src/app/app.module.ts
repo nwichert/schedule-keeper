@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { CustomIconsModule } from 'ionic2-custom-icons';
+import { HttpClientModule } from '@angular/common/http';
 
 import { SleepPage } from '../pages/sleep/sleep';
 import { DiaperPage } from '../pages/diaper/diaper';
@@ -15,6 +16,7 @@ import { TimerButtonsComponent } from '../components/timer-buttons/timer-buttons
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 import { TimerProvider } from '../providers/timer/timer';
 
@@ -39,7 +41,9 @@ import { TimerProvider } from '../providers/timer/timer';
           tabsPlacement: "bottom"
         }
       }
-    })
+    }),
+    AngularSvgIconModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

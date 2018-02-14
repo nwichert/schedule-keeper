@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { SvgIconRegistryService } from 'angular-svg-icon';
 
 @Component({
   selector: 'page-eat',
@@ -16,9 +17,7 @@ export class EatPage {
 
   }
 
-  public selectBreast = (breastSide) => {
-    if (this.breastRightOrLeft === breastSide) return;
-    this.breastRightOrLeft = breastSide;
+  selectBreast() {
   }
 
   selectLeftBreast(){

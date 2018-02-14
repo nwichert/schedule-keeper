@@ -10,24 +10,24 @@
     <ion-grid>
       <ion-row text-center>
         <ion-col>
-          <button (click)="selectBottle()">
-              <ion-icon name="icon-bottle-fed-selected"></ion-icon>
+          <button>
+              <svg-icon src="../assets/icon/bottle-fed.svg"></svg-icon>
           </button>
         </ion-col>
         <ion-col>
-          <!--<button> 
-            <ion-icon name="icon-breast-fed"></ion-icon>
-          </button>-->
+          <button>
+            <svg-icon src="../assets/icon/breast-fed.svg"></svg-icon>
+          </button>
           <div class="breastSide">
             <ion-row text-center>
               <ion-col>
-                <button (click)="selectLeftBreast()">
-                    <ion-icon name="arrow-dropleft" style="zoom:2.0;">Left</ion-icon>
+                <button>
+                    <svg-icon src="../assets/icon/left.svg"></svg-icon>
                 </button>
               </ion-col>
               <ion-col>
-                  <button (click)="selectRightBreast()">
-                      <ion-icon name="arrow-dropright" style="zoom:2.0;">Right</ion-icon>
+                  <button>
+                      <svg-icon src="../assets/icon/right.svg"></svg-icon>
                   </button>
                 </ion-col>
             </ion-row>
@@ -41,7 +41,9 @@
   <timer-buttons></timer-buttons>
 
   <div class="ounces-eaten">
-    <ion-label>Ounces Eaten: {{ ouncesEaten }}</ion-label>
+    <div class="ouncesEaten">
+      <ion-label>Ounces Eaten: {{ ouncesEaten }}</ion-label>
+    </div>
     <ion-range 
       min="0" 
       max="16" 
