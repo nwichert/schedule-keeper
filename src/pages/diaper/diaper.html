@@ -15,4 +15,67 @@
 
 <ion-content padding>
 
+  <div class="eat-type">
+    <ion-grid>
+      <ion-row text-center>
+        <ion-col>
+          <button (click)="showDiaperWetness=!showDiaperWetness">
+              <svg-icon src="../assets/icon/wet-diaper.svg"></svg-icon>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button (click)="showPoopType=!showPoopType">
+            <svg-icon src="../assets/icon/dirty-diaper.svg"></svg-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+  <div *ngIf="showDiaperWetness">
+    <div class="diaperWetness">
+      <ion-label>How wet was the diaper? {{ diaperType }}</ion-label>
+    </div>
+    <ion-range 
+      min="0" 
+      max="10" 
+      [(ngModel)]="diaperType" 
+      color="secondary">
+      <ion-label range-left>Dry</ion-label>
+      <ion-label range-right>Leaked Through</ion-label>
+    </ion-range>
+  </div>
+
+  <div *ngIf="showPoopType">
+    <div class="ouncesEaten">
+      <ion-label>How solid was the poop? {{ diaperType }}</ion-label>
+    </div>
+    <ion-range 
+      min="0" 
+      max="10" 
+      [(ngModel)]="diaperType" 
+      color="secondary">
+      <ion-label range-left>Runny</ion-label>
+      <ion-label range-right>Solid</ion-label>
+    </ion-range>
+  </div>
+
+
+  <div class="journal">
+    <h4>Diaper Journal:</h4>
+    <ion-list>
+      <div class="eat-log">
+        <ion-card>
+          <ion-card-header>
+            Date
+          </ion-card-header>
+          <ion-card-content>
+            Diaper Type:
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </ion-list>
+  </div>
+
 </ion-content>

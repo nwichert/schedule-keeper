@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { SvgIconRegistryService } from 'angular-svg-icon';
 
 @Component({
   selector: 'page-diaper',
@@ -8,10 +9,6 @@ import { NavController, NavParams } from 'ionic-angular';
 export class DiaperPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad DiaperPage');
   }
 
 }
