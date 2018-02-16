@@ -22,13 +22,12 @@
             <ion-row text-center>
               <ion-col>
                 <button>
-                    <svg-icon 
-                      src="../assets/icon/left.svg"></svg-icon>
+                    <ion-checkbox [(ngModel)]="eat.breastSideLeft">Left</ion-checkbox>
                 </button>
               </ion-col>
               <ion-col>
                   <button>
-                      <svg-icon src="../assets/icon/right.svg"></svg-icon>
+                     <ion-checkbox [(ngModel)]="eat.breastSideRight">Right</ion-checkbox>
                   </button>
                 </ion-col>
             </ion-row>

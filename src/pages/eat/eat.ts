@@ -14,6 +14,8 @@ export class EatPage {
 
   eat: Eat = {
     ouncesEaten: undefined,
+    breastSideLeft: undefined,
+    breastSideRight: undefined,
     nippleSizeOne: undefined,
     nippleSizeTwo: undefined,
     nippleSizeThree: undefined,
