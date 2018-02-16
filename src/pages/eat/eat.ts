@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { NavController, NavParams } from 'ionic-angular';
 import { SvgIconRegistryService } from 'angular-svg-icon';
 
-interface bottleDetail {
-  nippleSize: number
-}
+import { Eat } from '../../app/models/eat/eat.model';
 
 @Component({
   selector: 'page-eat',
@@ -12,6 +11,17 @@ interface bottleDetail {
 })
 
 export class EatPage {
+
+  eat: Eat = {
+    ouncesEaten: undefined,
+    nippleSizeOne: undefined,
+    nippleSizeTwo: undefined,
+    nippleSizeThree: undefined,
+    nippleSizeFour: undefined,
+    nippleSizeFive: undefined,
+    nippleSizeSix: undefined,
+    time: undefined
+  }
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

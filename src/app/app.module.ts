@@ -4,6 +4,9 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { CustomIconsModule } from 'ionic2-custom-icons';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { FormsModule } from '@angular/forms';
 
 import { SleepPage } from '../pages/sleep/sleep';
 import { DiaperPage } from '../pages/diaper/diaper';
@@ -13,6 +16,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { DateComponent } from '../components/date/date';
 import { TimerComponent } from '../components/timer/timer';
 import { TimerButtonsComponent } from '../components/timer-buttons/timer-buttons';
+import { FIREBASE_CONFIG } from './firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -29,7 +33,7 @@ import { TimerProvider } from '../providers/timer/timer';
     TabsPage,
     DateComponent,
     TimerComponent,
-    TimerButtonsComponent
+    TimerButtonsComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,10 @@ import { TimerProvider } from '../providers/timer/timer';
       }
     }),
     AngularSvgIconModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireDatabaseModule,
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

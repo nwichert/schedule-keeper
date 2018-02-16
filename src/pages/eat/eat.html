@@ -22,7 +22,8 @@
             <ion-row text-center>
               <ion-col>
                 <button>
-                    <svg-icon src="../assets/icon/left.svg"></svg-icon>
+                    <svg-icon 
+                      src="../assets/icon/left.svg"></svg-icon>
                 </button>
               </ion-col>
               <ion-col>
@@ -46,33 +47,33 @@
   <!--  Bottle Details  -->
   <div *ngIf="showBottleDetail">
     <div class="ounces-eaten">
-      <div class="ouncesEaten">
-        <ion-label>Ounces Eaten: {{ ouncesEaten }}</ion-label>
-      </div>
+      <ion-label>Ounces Eaten</ion-label>
       <ion-range
         min="0" 
         max="16" 
         step="1" 
         snaps="true" 
-        color="secondary" 
-        [(ngModel)]="ouncesEaten"></ion-range>
+        color="secondary"
+        [(ngModel)]="eat.ouncesEaten"></ion-range>
     </div>
 
     <ion-list>
       <div class="nipple-size">
           <ion-label>Nipple Size:</ion-label>         
-            <button ion-button>1</button>
-            <button ion-button>2</button>
-            <button ion-button>3</button>
-            <button ion-button>4</button>
-            <button ion-button>5</button>
-            <button ion-button>6</button>
+            <ion-checkbox [(ngModel)]="eat.nippleSizeOne">1</ion-checkbox>
+            <ion-checkbox [(ngModel)]="eat.nippleSizeTwo">2</ion-checkbox>
+            <ion-checkbox [(ngModel)]="eat.nippleSizeThree">3</ion-checkbox>
+            <ion-checkbox [(ngModel)]="eat.nippleSizeFour">4</ion-checkbox>
+            <ion-checkbox [(ngModel)]="eat.nippleSizeFive">5</ion-checkbox>
+            <ion-checkbox [(ngModel)]="eat.nippleSizeSix">6</ion-checkbox>
       </div>
     </ion-list>
   </div>
 
+  {{eat | json}}
+
   <div class="eat-submit">
-    <button type="submit" ion-button large (click)="eatLogSubmit()">Submit</button>
+    <button type="submit" ion-button large>Submit</button>
   </div>
 
   <div class="journal">
