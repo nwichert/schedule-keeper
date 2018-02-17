@@ -14,15 +14,11 @@ import { EatPage } from '../pages/eat/eat';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { DateComponent } from '../components/date/date';
-import { TimerComponent } from '../components/timer/timer';
-import { TimerButtonsComponent } from '../components/timer-buttons/timer-buttons';
 import { FIREBASE_CONFIG } from './firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularSvgIconModule } from 'angular-svg-icon';
-
-import { TimerProvider } from '../providers/timer/timer';
 
 @NgModule({
   declarations: [
@@ -31,9 +27,7 @@ import { TimerProvider } from '../providers/timer/timer';
     DiaperPage,
     EatPage,
     TabsPage,
-    DateComponent,
-    TimerComponent,
-    TimerButtonsComponent,
+    DateComponent
   ],
   imports: [
     BrowserModule,
@@ -63,8 +57,7 @@ import { TimerProvider } from '../providers/timer/timer';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TimerProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
