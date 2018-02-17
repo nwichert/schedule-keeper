@@ -3,7 +3,19 @@ import { FormsModule } from '@angular/forms';
 import { NavController, NavParams } from 'ionic-angular';
 import { SvgIconRegistryService } from 'angular-svg-icon';
 
-import { Eat } from '../../app/models/eat/eat.model';
+export interface Eat {
+  key?: string;
+  ouncesEaten: number;
+  breastSideLeft: string;
+  breastSideRight: string;
+  nippleSizeOne: number;
+  nippleSizeTwo: number;
+  nippleSizeThree: number;
+  nippleSizeFour: number;
+  nippleSizeFive: number;
+  nippleSizeSix: number;
+  time: number;
+}
 
 @Component({
   selector: 'page-eat',
