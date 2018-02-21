@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
@@ -14,11 +14,16 @@ import { EatPage } from '../pages/eat/eat';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { DateComponent } from '../components/date/date';
+import { BottleFormComponent } from '../components/bottle-form/bottle-form';
+import { MotherFormComponent } from '../components/mother-form/mother-form';
+import { JournalComponent } from '../components/journal/journal';
+
 import { FIREBASE_CONFIG } from './firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { EatJournalProvider } from '../providers/eat-journal/eat-journal';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,10 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     DiaperPage,
     EatPage,
     TabsPage,
-    DateComponent
+    DateComponent,
+    BottleFormComponent,
+    MotherFormComponent,
+    JournalComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +52,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     HttpClientModule,
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,10 +62,14 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     EatPage,
     TabsPage
   ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    EatJournalProvider
   ]
 })
 export class AppModule {}

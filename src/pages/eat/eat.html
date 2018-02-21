@@ -15,7 +15,7 @@
           </button>
         </ion-col>
         <ion-col>
-          <button (click)="showBreastDetail=!showBreastDetail">
+          <button (click)="showMotherDetail=!showMotherDetail">
             <svg-icon src="../assets/icon/breast-fed.svg"></svg-icon>
           </button>
           <div *ngIf="showBreastDetail">
@@ -37,6 +37,9 @@
     </ion-grid>
   </div>
 
+  <bottle-form *ngIf="showBottleDetail"></bottle-form>
+  <mother-form *ngIf="showMotherDetail"></mother-form>
+
   <!--  Breast Details  -->
   <!--<div *ngIf="showBreastDetail">
     <timer></timer>
@@ -44,36 +47,18 @@
   </div>-->
 
   <!--  Bottle Details  -->
-  <div *ngIf="showBottleDetail">
-    <div class="ounces-eaten">
-      <ion-label>Ounces Eaten</ion-label>
-      <ion-range
-        min="0" 
-        max="16" 
-        step="1" 
-        snaps="true" 
-        color="secondary"
-        [(ngModel)]="eat.ouncesEaten"></ion-range>
-    </div>
+    <!--
 
     <ion-list>
       <div class="nipple-size">
-          <ion-label>Nipple Size:</ion-label>         
-            <ion-checkbox [(ngModel)]="eat.nippleSizeOne">1</ion-checkbox>
-            <ion-checkbox [(ngModel)]="eat.nippleSizeTwo">2</ion-checkbox>
-            <ion-checkbox [(ngModel)]="eat.nippleSizeThree">3</ion-checkbox>
-            <ion-checkbox [(ngModel)]="eat.nippleSizeFour">4</ion-checkbox>
-            <ion-checkbox [(ngModel)]="eat.nippleSizeFive">5</ion-checkbox>
-            <ion-checkbox [(ngModel)]="eat.nippleSizeSix">6</ion-checkbox>
+          <page-eat></page-eat>
       </div>
     </ion-list>
   </div>
 
   {{eat | json}}
 
-  <div class="eat-submit">
-    <button type="submit" ion-button large>Submit</button>
-  </div>
+  
 
   <div class="journal">
     <h4>Food Journal:</h4>
@@ -84,11 +69,11 @@
             Date
           </ion-card-header>
           <ion-card-content>
-            Ounces Eaten:
+            Details
           </ion-card-content>
         </ion-card>
       </div>
     </ion-list>
-  </div>
+  </div>-->
 
 </ion-content>
