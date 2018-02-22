@@ -5,6 +5,10 @@
 </ion-header>
 
 <ion-content padding>
+  
+  <div class="Food-journal-header">
+    <h4>Record a Feeding</h4>
+  </div>
 
   <div class="eat-type">
     <ion-grid>
@@ -40,42 +44,14 @@
   <bottle-form *ngIf="showBottleDetail"></bottle-form>
   <mother-form *ngIf="showMotherDetail"></mother-form>
 
-  <journal></journal>
-
-  <!--  Breast Details  -->
-  <!--<div *ngIf="showBreastDetail">
-    <timer></timer>
-    <timer-buttons></timer-buttons>
-  </div>-->
-
-  <!--  Bottle Details  -->
-    <!--
-
-    <ion-list>
-      <div class="nipple-size">
-          <page-eat></page-eat>
-      </div>
-    </ion-list>
-  </div>
-
-  {{eat | json}}
-
-  
-
-  <div class="journal">
-    <h4>Food Journal:</h4>
-    <ion-list>
-      <div class="eat-log">
-        <ion-card>
-          <ion-card-header>
-            Date
-          </ion-card-header>
-          <ion-card-content>
-            Details
-          </ion-card-content>
-        </ion-card>
-      </div>
-    </ion-list>
-  </div>-->
+  <ion-card  *ngFor="let bottleDetail of bottleDetail$ | async">
+    <ion-card-header>
+      Bottle Details: {{ bottleDetail.createdAt }}
+    </ion-card-header>
+    <ion-card-content>
+      Bottle Nipple Size: {{ bottleDetail.nippleSize }} <br>
+      Ounces Baby Ate: {{ bottleDetail.ouncesEaten }}
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

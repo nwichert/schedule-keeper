@@ -16,14 +16,13 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { DateComponent } from '../components/date/date';
 import { BottleFormComponent } from '../components/bottle-form/bottle-form';
 import { MotherFormComponent } from '../components/mother-form/mother-form';
-import { JournalComponent } from '../components/journal/journal';
 
 import { FIREBASE_CONFIG } from './firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularSvgIconModule } from 'angular-svg-icon';
-import { EatJournalProvider } from '../providers/eat-journal/eat-journal';
+import { BottleFormProvider } from '../providers/bottle-form/bottle-form';
 
 @NgModule({
   declarations: [
@@ -34,8 +33,7 @@ import { EatJournalProvider } from '../providers/eat-journal/eat-journal';
     TabsPage,
     DateComponent,
     BottleFormComponent,
-    MotherFormComponent,
-    JournalComponent
+    MotherFormComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +67,7 @@ import { EatJournalProvider } from '../providers/eat-journal/eat-journal';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    EatJournalProvider
+    BottleFormProvider,
   ]
 })
 export class AppModule {}

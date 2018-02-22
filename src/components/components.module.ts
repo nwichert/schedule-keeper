@@ -2,17 +2,14 @@ import { NgModule } from '@angular/core';
 import { DateComponent } from './date/date';
 import { BottleFormComponent } from './bottle-form/bottle-form';
 import { MotherFormComponent } from './mother-form/mother-form';
-import { JournalComponent } from './journal/journal';
 
 @NgModule({
 	declarations: [DateComponent,
     BottleFormComponent,
-    MotherFormComponent,
-    JournalComponent],
+    MotherFormComponent],
 	imports: [],
 	exports: [DateComponent,
     BottleFormComponent,
-    MotherFormComponent,
-    JournalComponent],
+    MotherFormComponent],
 })
 export class ComponentsModule {}

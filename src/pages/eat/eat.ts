@@ -3,7 +3,10 @@ import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavController, NavParams } from 'ionic-angular';
 import { SvgIconRegistryService } from 'angular-svg-icon';
+import { Observable } from 'rxjs/Observable';
 
+import { BottleFormProvider } from '../../providers/bottle-form/bottle-form';
+import { BottleDetails } from '../../models/bottle-details/bottle-details.model';
 
 @Component({
   selector: 'page-eat',
@@ -12,52 +15,20 @@ import { SvgIconRegistryService } from 'angular-svg-icon';
 
 export class EatPage {
 
-  // formula = {
-  //   ouncesEaten: undefined
-  // }
+  bottleDetail$: Observable<BottleDetails[]>;
 
-  // bottle = {
-  //   nippleSize: [
-  //     {size: 1, selected: false, id: 1},
-  //     {size: 2, selected: false, id: 2},
-  //     {size: 3, selected: false, id: 3},
-  //     {size: 4, selected: false, id: 4},
-  //     {size: 5, selected: false, id: 5},
-  //     {size: 6, selected: false, id: 6}
-  //   ]
-  // }
-
-  // breast = {
-  //   breastSide: [
-  //     {breastSideLeft: 'Left', selected: false, id: 1},
-  //     {breastSideRight: 'Right', selected: false, id: 2}
-  //   ]
-  // }
-
-  // myForm: FormGroup;
-
-  // constructor(
-  //   public navCtrl: NavController, 
-  //   public navParams: NavParams,
-  //   private fb: FormBuilder) {
-  //   }
-
-  // ngOnInit() {
-  //   this.myForm = this.fb.group({
-  //     nippleSize: this.fb.array([])
-  //   });
-  // }
-
-  // onChange(ouncesEaten: number, isChecked: boolean) {
-  //   const nippleSizeFormArray = <FormArray>this.myForm.controls.nippleSize;
-
-  //   if(isChecked){
-  //     nippleSizeFormArray.push(new FormControl(ouncesEaten));
-  //   } else {
-  //     let index = nippleSizeFormArray.controls.findIndex(x => x.value == ouncesEaten)
-  //     nippleSizeFormArray.removeAt(index);
-  //   }
-  // }
-
-
+  constructor(
+    public navCtrl: NavController,
+    private bottle: BottleFormProvider
+  ) {
+    this.bottleDetail$ = this.bottle
+      .getBottleDetails() // returns a DB LIST
+      .snapshotChanges()  // acces to Key and Value pairs
+      .map(
+        changes => {
+          return changes.map(c => ({
+            key: c.payload.key, ...c.payload.val()
+          }));
+        });
+  }
 }
