@@ -16,6 +16,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { DateComponent } from '../components/date/date';
 import { BottleFormComponent } from '../components/bottle-form/bottle-form';
 import { MotherFormComponent } from '../components/mother-form/mother-form';
+import { StopwatchComponent } from '../components/stopwatch/stopwatch';
+import { StopwatchButtonsComponent } from '../components/stopwatch-buttons/stopwatch-buttons';
 
 import { FIREBASE_CONFIG } from './firebase.credentials';
 
@@ -23,6 +25,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { BottleFormProvider } from '../providers/bottle-form/bottle-form';
+import { StopwatchProvider } from '../providers/stopwatch/stopwatch';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,9 @@ import { BottleFormProvider } from '../providers/bottle-form/bottle-form';
     TabsPage,
     DateComponent,
     BottleFormComponent,
-    MotherFormComponent
+    MotherFormComponent,
+    StopwatchComponent,
+    StopwatchButtonsComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +73,7 @@ import { BottleFormProvider } from '../providers/bottle-form/bottle-form';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BottleFormProvider,
+    StopwatchProvider,
   ]
 })
 export class AppModule {}

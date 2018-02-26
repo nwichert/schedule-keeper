@@ -44,14 +44,28 @@
   <bottle-form *ngIf="showBottleDetail"></bottle-form>
   <mother-form *ngIf="showMotherDetail"></mother-form>
 
-  <ion-card  *ngFor="let bottleDetail of bottleDetail$ | async">
-    <ion-card-header>
-      Bottle Details: {{ bottleDetail.createdAt }}
-    </ion-card-header>
-    <ion-card-content>
-      Bottle Nipple Size: {{ bottleDetail.nippleSize }} <br>
-      Ounces Baby Ate: {{ bottleDetail.ouncesEaten }}
-    </ion-card-content>
-  </ion-card>
+  <div class="bottle-log" *ngIf="showBottleDetail">
+    <ion-card *ngFor="let bottleDetail of bottleDetail$ | async">
+      <ion-card-header>
+        Bottle Details: {{ bottleDetail.createdAt }}
+      </ion-card-header>
+      <ion-card-content>
+        Bottle Nipple Size: {{ bottleDetail.nippleSize }} <br>
+        Ounces Baby Ate: {{ bottleDetail.ouncesEaten }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!--<div class="breast-feeding-log" *ngIf="showBreastDetail">
+    <ion-card *ngFor="let breastDetail of breastDetail$ | async">
+      <ion-card-header>
+        Bottle Details: {{ breastDetail.createdAt }}
+      </ion-card-header>
+      <ion-card-content>
+        Bottle Nipple Size: {{ breastDetail.nippleSize }} <br>
+        Ounces Baby Ate: {{ breastDetail.time }}
+      </ion-card-content>
+    </ion-card>
+  </div>-->
 
 </ion-content>
