@@ -7,7 +7,7 @@ import { StopwatchProvider } from '../../providers/stopwatch/stopwatch';
   template: `
     <div class="stopwatch">
       <p id="minutes">{{(minutesDisplay) && (minutesDisplay <= 59) ? minutesDisplay : '00'}}</p>
-      <span id="divider">:</span>
+      <span class="divider">:</span>
       <p id="seconds">{{(secondsDisplay) && (secondsDisplay <= 59) ? secondsDisplay : '00'}}</p>
     </div>
   `,

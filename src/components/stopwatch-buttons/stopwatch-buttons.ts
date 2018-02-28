@@ -4,35 +4,26 @@ import { StopwatchProvider } from '../../providers/stopwatch/stopwatch';
 @Component({
   selector: 'stopwatch-buttons',
   template: `
-    <div id="button-wrap">
-      <ion-grid>
-        <ion-row class="button-controls">
-          <ion-col>
-            <button
-              class="play"
-              ion-button icon-only round
-              [disabled]="play" (click)="playTimer()">
-                <ion-icon name="play"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-        <ion-row class="button-controls">
-          <ion-col>
-            <button
-              class="pause"
-              ion-button icon-only round 
-              [disabled]="!play" (click)="pauseTimer()">
-                <ion-icon name="pause"></ion-icon>
-            </button>
-            <button 
-              class="stop"
-              ion-button icon-only round 
-              (click)="stopTimer()">
-                <ion-icon name="square"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+    <div class="button-wrap">
+      <button
+        id="play"
+        ion-button round
+        [disabled]="play" (click)="playTimer()">
+          <ion-icon name="play"></ion-icon>
+          Start
+      </button>
+      <button
+        class="pause"
+        ion-button icon-only round 
+        [disabled]="!play" (click)="pauseTimer()">
+          <ion-icon name="pause"></ion-icon>
+      </button>
+      <button 
+        class="stop"
+        ion-button icon-only round 
+        (click)="stopTimer()">
+          <ion-icon name="square"></ion-icon>
+      </button>
     </div>
   `,
   styles: [`

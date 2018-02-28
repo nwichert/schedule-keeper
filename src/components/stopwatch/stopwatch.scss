@@ -1,6 +1,6 @@
 .stopwatch {
   text-align: center;
-  color: #50E3C2;
+  color: #5f5a5a;
 }
 
 p {
@@ -9,12 +9,9 @@ p {
 	display: inline-block;
 	font-size: 6em;
 	font-weight: 600;
-	font-feature-settings: "tnum" on;
-	font-variant-numeric: tabular-nums;
 	position: relative;
 	
 	&::after {
-		// color: darken($clouds, 35%);
 		font-size: 0.18em;
 		font-weight: 600;
 		letter-spacing: 1px;
@@ -26,30 +23,17 @@ p {
 	
 	&#minutes::after {
 		content: 'Minutes';
+    color: #869FA4;
 	}
 	&#seconds::after {
 		content: 'Seconds';
+    color: #869FA4;
 	}
 }
 
 span.divider {
-	// color: darken($clouds, 35%);
 	font-size: 6em;
 	font-weight: 400;
 	margin: 0 10px;
-}
-
-.hours {
-  color: #FF0068;
-  font-size: 60px;
-}
-
-.minutes {
-  color: #FF0068;
-  font-size: 60px;
-}
-
-.seconds {
-  color: #bcbcbc;
-  font-size: 60px;
+  color: #869FA4;
 }

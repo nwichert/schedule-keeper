@@ -19,6 +19,11 @@
   src: url('../assets/fonts/stopwatch.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: stopwatch2;
+  src: url('../assets/fonts/stopwatch2.woff2') format('woff2');
+}
+
 .tabs-wp-primary .tab-button:hover:not(.disable-hover),
 .tabs-wp-primary .tab-button:hover:not(.disable-hover) .tab-button-icon,
 .tabs-wp-primary .tab-button[aria-selected=true],
