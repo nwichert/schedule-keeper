@@ -18,6 +18,7 @@ import { BottleFormComponent } from '../components/bottle-form/bottle-form';
 import { MotherFormComponent } from '../components/mother-form/mother-form';
 import { StopwatchComponent } from '../components/stopwatch/stopwatch';
 import { StopwatchButtonsComponent } from '../components/stopwatch-buttons/stopwatch-buttons';
+import { HeaderMenuComponent } from '../components/header-menu/header-menu';
 
 import { FIREBASE_CONFIG } from './firebase.credentials';
 
@@ -38,7 +39,8 @@ import { StopwatchProvider } from '../providers/stopwatch/stopwatch';
     BottleFormComponent,
     MotherFormComponent,
     StopwatchComponent,
-    StopwatchButtonsComponent
+    StopwatchButtonsComponent,
+    HeaderMenuComponent
   ],
   imports: [
     BrowserModule,

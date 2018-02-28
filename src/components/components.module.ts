@@ -6,6 +6,7 @@ import { StopwatchComponent } from './stopwatch/stopwatch';
 import { StopwatchButtonsComponent } from './stopwatch-buttons/stopwatch-buttons';
 import { WetDiaperComponent } from './wet-diaper/wet-diaper';
 import { DirtyDiaperComponent } from './dirty-diaper/dirty-diaper';
+import { HeaderMenuComponent } from './header-menu/header-menu';
 
 @NgModule({
 	declarations: [DateComponent,
@@ -14,7 +15,8 @@ import { DirtyDiaperComponent } from './dirty-diaper/dirty-diaper';
     StopwatchComponent,
     StopwatchButtonsComponent,
     WetDiaperComponent,
-    DirtyDiaperComponent],
+    DirtyDiaperComponent,
+    HeaderMenuComponent],
 	imports: [],
 	exports: [DateComponent,
     BottleFormComponent,
@@ -22,6 +24,7 @@ import { DirtyDiaperComponent } from './dirty-diaper/dirty-diaper';
     StopwatchComponent,
     StopwatchButtonsComponent,
     WetDiaperComponent,
-    DirtyDiaperComponent],
+    DirtyDiaperComponent,
+    HeaderMenuComponent],
 })
 export class ComponentsModule {}
