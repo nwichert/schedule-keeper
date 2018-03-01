@@ -3,7 +3,8 @@ import { NavController } from 'ionic-angular';
 import { AngularFireDatabase, } from 'angularfire2/database';
 import 'rxjs/add/operator/map';
 
-import { EatPage } from '../../pages/eat/eat';
+// import { EatPage } from '../../pages/eat/eat';
+import { JournalPage } from '../../pages/journal/journal';
 
 import { BottleDetails } from '../../models/bottle-details/bottle-details.model';
 import { BottleFormProvider } from '../../providers/bottle-form/bottle-form'; 
@@ -73,7 +74,7 @@ export class BottleFormComponent {
 
   addBottleDetail(bottleDetail: BottleDetails){
     this.bottlefeeding.addBottleDetail(bottleDetail).then(ref => {
-      this.navCtrl.push(EatPage, { key: ref.key })
+      this.navCtrl.push(JournalPage, { key: ref.key })
     })
   }
 

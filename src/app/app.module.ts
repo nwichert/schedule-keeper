@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { SleepPage } from '../pages/sleep/sleep';
 import { DiaperPage } from '../pages/diaper/diaper';
 import { EatPage } from '../pages/eat/eat';
+import { JournalPage } from '../pages/journal/journal';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { DateComponent } from '../components/date/date';
@@ -34,6 +35,7 @@ import { StopwatchProvider } from '../providers/stopwatch/stopwatch';
     SleepPage,
     DiaperPage,
     EatPage,
+    JournalPage,
     TabsPage,
     DateComponent,
     BottleFormComponent,
@@ -65,6 +67,7 @@ import { StopwatchProvider } from '../providers/stopwatch/stopwatch';
     SleepPage,
     DiaperPage,
     EatPage,
+    JournalPage,
     TabsPage
   ],
   schemas: [
