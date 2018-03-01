@@ -55,7 +55,7 @@
         <div class="bottle-log" *ngIf="showBottleDetail">
           <ion-card *ngFor="let bottleDetail of bottleDetail$ | async">
             <ion-card-header>
-              Bottle Details: {{ bottleDetail.createdAt }}
+              Bottle Details: {{ bottleDetail.createdOn | date: 'dd/MM/yyyy' }}
             </ion-card-header>
             <ion-card-content>
               Bottle Nipple Size: {{ bottleDetail.nippleSize }} <br>

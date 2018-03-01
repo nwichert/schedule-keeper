@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { NavController } from 'ionic-angular';
 import { AngularFireDatabase, } from 'angularfire2/database';
 import 'rxjs/add/operator/map';
@@ -15,7 +16,7 @@ import { BottleFormProvider } from '../../providers/bottle-form/bottle-form';
   template: `
       <ion-list radio-group [(ngModel)]="bottleDetail.nippleSize">
         <ion-list-header no-lines>
-          Nipple Size (0-4)
+          Nipple Size (0-4) 
         </ion-list-header>
         
         <ion-row text-center>
@@ -42,6 +43,13 @@ import { BottleFormProvider } from '../../providers/bottle-form/bottle-form';
         </ion-row>
       </ion-list>
 
+      <ion-row>
+        <ion-item>
+          <ion-label>Date</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="bottleDetail.createdOn"></ion-datetime>
+        </ion-item>
+      </ion-row>
+
       <ion-list-header no-lines>
         Ounces Eaten: {{ bottleDetail.ouncesEaten }} ounces
       </ion-list-header>
@@ -63,7 +71,8 @@ export class BottleFormComponent {
 
   bottleDetail: BottleDetails = {
     nippleSize: undefined,
-    ouncesEaten: 0
+    ouncesEaten: 0,
+    createdOn: null,
   };
   
   constructor(
