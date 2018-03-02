@@ -14,12 +14,15 @@ import { EatPage } from '../pages/eat/eat';
 import { JournalPage } from '../pages/journal/journal';
 import { TabsPage } from '../pages/tabs/tabs';
 
+import { OrderByDateCreatedPipe } from '../pipes/order-by-date-created/order-by-date-created';
+
 import { DateComponent } from '../components/date/date';
 import { BottleFormComponent } from '../components/bottle-form/bottle-form';
 import { MotherFormComponent } from '../components/mother-form/mother-form';
 import { StopwatchComponent } from '../components/stopwatch/stopwatch';
 import { StopwatchButtonsComponent } from '../components/stopwatch-buttons/stopwatch-buttons';
 import { HeaderMenuComponent } from '../components/header-menu/header-menu';
+
 
 import { FIREBASE_CONFIG } from './firebase.credentials';
 
@@ -42,7 +45,9 @@ import { StopwatchProvider } from '../providers/stopwatch/stopwatch';
     MotherFormComponent,
     StopwatchComponent,
     StopwatchButtonsComponent,
-    HeaderMenuComponent
+    HeaderMenuComponent,
+    OrderByDateCreatedPipe
+
   ],
   imports: [
     BrowserModule,

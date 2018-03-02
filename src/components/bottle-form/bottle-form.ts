@@ -4,7 +4,8 @@ import { NavController } from 'ionic-angular';
 import { AngularFireDatabase, } from 'angularfire2/database';
 import 'rxjs/add/operator/map';
 
-// import { EatPage } from '../../pages/eat/eat';
+import { OrderByDateCreatedPipe } from '../../pipes/order-by-date-created/order-by-date-created';
+
 import { JournalPage } from '../../pages/journal/journal';
 
 import { BottleDetails } from '../../models/bottle-details/bottle-details.model';
