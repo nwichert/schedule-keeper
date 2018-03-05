@@ -64,7 +64,7 @@ import { BottleFormProvider } from '../../providers/bottle-form/bottle-form';
 export class BottleFormComponent {
 
   bottleDetail: BottleDetails = {
-    nippleSize: undefined,
+    nippleSize: null,
     ouncesEaten: 0,
     createdOn: Date.now(),
   };
