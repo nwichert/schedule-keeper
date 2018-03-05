@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {} from '../../components/stopwatch/stopwatch';
 
 @Component({
   selector: 'page-sleep',
