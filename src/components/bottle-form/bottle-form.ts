@@ -44,13 +44,6 @@ import { BottleFormProvider } from '../../providers/bottle-form/bottle-form';
         </ion-row>
       </ion-list>
 
-      <ion-row>
-        <ion-item>
-          <ion-label>Date</ion-label>
-          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="bottleDetail.createdOn"></ion-datetime>
-        </ion-item>
-      </ion-row>
-
       <ion-list-header no-lines>
         Ounces Eaten: {{ bottleDetail.ouncesEaten }} ounces
       </ion-list-header>
@@ -73,7 +66,7 @@ export class BottleFormComponent {
   bottleDetail: BottleDetails = {
     nippleSize: undefined,
     ouncesEaten: 0,
-    createdOn: null,
+    createdOn: Date.now(),
   };
   
   constructor(
