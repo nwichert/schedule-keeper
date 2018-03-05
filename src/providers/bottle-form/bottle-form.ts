@@ -17,7 +17,7 @@ export class BottleFormProvider {
   }
 
   addBottleDetail(bottleDetail: BottleDetails) {
-    return this.bottleDetailsRef.push(bottleDetail);
+    return this.bottleDetailsRef.push(bottleDetail)
   }
 
 }
